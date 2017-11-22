@@ -3,7 +3,9 @@
 @section('content')
     @if (Auth::check())
         <?php $user = Auth::user(); ?>
-        {{ $user->name }}
+        <h2>{{ $user->name }}さん</h2>
+        <h2>登録されたタスクを{!! link_to_route("tasks.index", "チェック") !!}しましょう</h2>
+        
     @else
         <div class="center jumbotron">
             <div class="text-center">
