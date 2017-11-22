@@ -30,7 +30,8 @@ class AuthController extends Controller
      */
      
     //追加
-    protected $redirectTo = "/"; 
+    protected $redirectTo = "/";
+    protected $loginPath = '/login'; //追記
      
     public function __construct()
     {
