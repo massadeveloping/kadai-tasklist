@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <h1>id: {{ $task->id  }} のタスク変更ページ</h1>
+    <?php $user = Auth::user(); ?>
+    <h2>{{ $user->name }}さんのタスク変更ページ</h2>
     
     <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">

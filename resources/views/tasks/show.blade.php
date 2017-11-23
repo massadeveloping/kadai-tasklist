@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <h1>id = {{ $task->id }} のタスク詳細ページ</h1>
+    <?php $user = Auth::user(); ?>
+    <h2>{{ $user->name }}さんのタスク詳細ページ</h2>
     <table class="table table-bordered">
         <tr>
-            <th>id</th>
+            <th>タスクid</th>
             <td>{{ $task->id }}</td>
         </tr>
         <tr>
